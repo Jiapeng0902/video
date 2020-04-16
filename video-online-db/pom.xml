@@ -18,5 +18,9 @@
     </parent>
 
     <dependencies>
+        <dependency>
+            <groupId>com.roc.meteor</groupId>
+            <artifactId>video-online-common</artifactId>
+        </dependency>
     </dependencies>
 </project>

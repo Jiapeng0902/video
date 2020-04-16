@@ -13,6 +13,8 @@
 
     <modules>
         <module>video-online-analyse</module>
+        <module>video-online-security</module>
+        <module>video-online-portal</module>
         <module>video-online-admin</module>
         <module>video-online-common</module>
         <module>video-online-basic</module>
@@ -139,7 +141,12 @@
                 <artifactId>video-online-db</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            <!-- 二方包 end-->
+            <dependency>
+                <groupId>com.roc.meteor</groupId>
+                <artifactId>video-online-security</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!-- 二方包 ends-->
         </dependencies>
     </dependencyManagement>
 </project>
