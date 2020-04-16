@@ -1,13 +1,13 @@
-package com.roc.meteor.server;
+package com.roc.meteor.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class VideoOnlineServerApplication {
+public class VideoOnlineDemoApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(VideoOnlineServerApplication.class, args);
+        SpringApplication.run(VideoOnlineDemoApplication.class, args);
     }
 
 }

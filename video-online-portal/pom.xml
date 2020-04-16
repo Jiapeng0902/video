@@ -4,12 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.roc.meteor</groupId>
-    <artifactId>video-online-basic</artifactId>
+    <artifactId>video-online-portal</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
 
-    <name>video-online-basic</name>
-    <description>Online video basic for meteor.</description>
+    <name>video-online-portal</name>
+    <description>Online video portal for meteor.</description>
 
     <parent>
         <groupId>com.roc.meteor</groupId>

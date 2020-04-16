@@ -3,13 +3,6 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.6.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
-
     <groupId>com.roc.meteor</groupId>
     <artifactId>video-online</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -18,29 +11,71 @@
     <name>video-online</name>
     <description>Meteor online video program.</description>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-        <!--custom-->
-        <spring-boot.version>2.0.9.RELEASE</spring-boot.version>
-        <lombok.version>1.18.12</lombok.version>
-        <apache.commons.version>3.9</apache.commons.version>
-        <common.collection.version>3.2.2</common.collection.version>
-        <fastjson.version>1.2.68</fastjson.version>
-        <guava.version>28.0-jre</guava.version>
-        <fastjson.version>1.2.67</fastjson.version>
-        <jts.version>1.14</jts.version>
-    </properties>
-
     <modules>
         <module>video-online-analyse</module>
-        <module>video-online-basic</module>
+        <module>video-online-admin</module>
         <module>video-online-common</module>
+        <module>video-online-basic</module>
+        <module>video-online-demo</module>
         <module>video-online-db</module>
-        <module>video-online-server</module>
-        <module>video-online-bootstrap</module>
     </modules>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.6.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <properties>
+        <!--system version information start-->
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <!--system version information end-->
+
+        <!--custom version information start-->
+        <pagehelper-starter.version>1.2.10</pagehelper-starter.version>
+        <common.collection.version>3.2.2</common.collection.version>
+        <spring-boot.version>2.0.9.RELEASE</spring-boot.version>
+        <apache.commons.version>3.9</apache.commons.version>
+        <fastjson.version>1.2.68</fastjson.version>
+        <fastjson.version>1.2.67</fastjson.version>
+        <lombok.version>1.18.12</lombok.version>
+        <hutool.version>4.5.7</hutool.version>
+        <guava.version>28.0-jre</guava.version>
+        <druid.version>1.1.10</druid.version>
+        <jts.version>1.14</jts.version>
+        <!--custom version information end-->
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+        </dependency>
+    </dependencies>
 
     <dependencyManagement>
         <dependencies>
@@ -76,24 +111,24 @@
                 <artifactId>commons-collections</artifactId>
                 <version>${common.collection.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${pagehelper-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
             <!-- 三方包 end-->
 
             <!-- 二方包 start-->
-            <dependency>
-                <groupId>com.roc.meteor</groupId>
-                <artifactId>video-online-bootstrap</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.roc.meteor</groupId>
-                <artifactId>video-online-analyse</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.roc.meteor</groupId>
-                <artifactId>video-online-basic</artifactId>
-                <version>${project.version}</version>
-            </dependency>
             <dependency>
                 <groupId>com.roc.meteor</groupId>
                 <artifactId>video-online-common</artifactId>
@@ -104,13 +139,7 @@
                 <artifactId>video-online-db</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.roc.meteor</groupId>
-                <artifactId>video-online-server</artifactId>
-                <version>${project.version}</version>
-            </dependency>
             <!-- 二方包 end-->
         </dependencies>
     </dependencyManagement>
-
 </project>
