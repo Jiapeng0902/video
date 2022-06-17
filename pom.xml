@@ -41,7 +41,7 @@
         <common.collection.version>3.2.2</common.collection.version>
         <spring-boot.version>2.0.9.RELEASE</spring-boot.version>
         <apache.commons.version>3.9</apache.commons.version>
-        <fastjson.version>1.2.68</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <fastjson.version>1.2.67</fastjson.version>
         <lombok.version>1.18.12</lombok.version>
         <hutool.version>4.5.7</hutool.version>
